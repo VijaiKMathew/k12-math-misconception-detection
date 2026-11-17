@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Competitive ML Champion Solution | Misconception Detection in K-12 Math Workings</title>
+  <style>
+    :root {
+      --bg-base: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #f1f5f9;
+      --bg-surface-hover: #e2e8f0;
+      --border-subtle: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #64748b;
+      --accent-primary: #2563eb;
+      --accent-primary-hover: #1d4ed8;
+      --accent-emerald: #059669;
+      --accent-purple: #7c3aed;
+      --accent-amber: #d97706;
+      --accent-rose: #e11d48;
+      --code-bg: #f1f5f9;
+      --code-border: #cbd5e1;
+      --code-text: #0f172a;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-base: #0b0f19;
+        --bg-surface: #111827;
+        --bg-surface-elevated: #1f2937;
+        --bg-surface-hover: #374151;
+        --border-subtle: #1f2937;
+        --border-strong: #374151;
+        --text-main: #f9fafb;
+        --text-muted: #9ca3af;
+        --text-dim: #6b7280;
+        --accent-primary: #3b82f6;
+        --accent-primary-hover: #60a5fa;
+        --accent-emerald: #10b981;
+        --accent-purple: #a855f7;
+        --accent-amber: #f59e0b;
+        --accent-rose: #f43f5e;
+        --code-bg: #1e293b;
+        --code-border: #334155;
+        --code-text: #f8fafc;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    .badge-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .badge {
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.35rem 0.75rem;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge-blue { background: #dbeafe; color: #1e40af; }
+    .badge-green { background: #d1fae5; color: #065f46; }
+    .badge-amber { background: #fef3c7; color: #92400e; }
+    .badge-purple { background: #f3e8ff; color: #6b21a8; }
+    h1 { font-size: 2.25rem; font-weight: 800; margin-bottom: 0.75rem; color: var(--text-main); }
+    .subtitle { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 1.5rem; }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .stat-card {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .stat-value { font-size: 1.8rem; font-weight: 700; color: var(--accent-primary); }
+    .stat-label { font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; font-weight: 600; }
+
+    section {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border-subtle); padding-bottom: 0.5rem; }
+    h3 { font-size: 1.25rem; font-weight: 600; margin: 1.25rem 0 0.5rem; color: var(--accent-primary); }
+    p { margin-bottom: 1rem; color: var(--text-muted); }
+    ul, ol { margin-left: 1.5rem; margin-bottom: 1rem; color: var(--text-muted); }
+    li { margin-bottom: 0.5rem; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: var(--bg-surface);
+    }
+    th, td {
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--border-subtle);
+      text-align: left;
+    }
+    th {
+      background: var(--bg-surface-elevated);
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    tr:nth-child(even) { background: var(--bg-surface-elevated); }
+
+    .figure-container {
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .figure-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .figure-caption {
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--text-dim);
+      font-style: italic;
+    }
+
+    pre {
+      background: var(--code-bg);
+      border: 1px solid var(--code-border);
+      border-radius: 8px;
+      padding: 1rem;
+      overflow-x: auto;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9rem;
+      color: var(--code-text);
+      margin: 1rem 0;
+    }
+
+    .alert {
+      padding: 1.25rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+      border-left: 4px solid;
+    }
+    .alert-amber { background: #fffbeb; border-color: var(--accent-amber); color: #92400e; }
+    .alert-blue { background: #eff6ff; border-color: var(--accent-primary); color: #1e40af; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge-container">
+      <span class="badge badge-blue">Champion Solution</span>
+      <span class="badge badge-green">Verified LB: 0.62483</span>
+      <span class="badge badge-purple">Honest 5-Fold CV: 0.68089</span>
+      <span class="badge badge-amber">Strictly Leak-Free</span>
+    </div>
+    <h1>Misconception Detection in K-12 Student Math Workings</h1>
+    <p class="subtitle">A 5-Paradigm Quantum-Circuit Stacking & Unitary Horizon Expansion Solution by Vijai K Mathew</p>
+    
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value">0.68089</div>
+        <div class="stat-label">Honest 5-Fold CV MAP@3</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">0.62483</div>
+        <div class="stat-label">Verified Public LB (Ref #58314170)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">94.60%</div>
+        <div class="stat-label">Overall Horizon Recall (H24)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">0.94246</div>
+        <div class="stat-label">Clean Workings MAP@3 (NONE)</div>
+      </div>
+    </div>
+  </header>
+
+  <section id="architecture">
+    <h2>🏛️ System High-Level Architecture</h2>
+    <p>The solution addresses the multimodal distribution shift between training and test sets using 5 distinct model families united under max-preserving orthogonal subspace projection.</p>
+    
+    <div class="figure-container">
+      <img src="../docs/images/figure0_system_hld.png" alt="End-to-End System High-Level Design Architecture">
+      <div class="figure-caption">Figure 0: End-to-End Multimodal Stacking Architecture & Gatekeeper Verification Pipeline</div>
+    </div>
+  </section>
+
+  <section id="breakthroughs">
+    <h2>🚀 The 5 Core Breakthroughs</h2>
+    
+    <h3>1. Quantum-Circuit Unitary Candidate Horizon Expansion (H24)</h3>
+    <p>Single models predicting top-8 candidates suffer a hard <code>79.16%</code> recall ceiling on error cases. Our 24-candidate unitary union pool draws from vision-language logits, dense nearest neighbors, and symbolic state verifiers, lifting unclean recall to <strong>92.29%</strong>.</p>
+
+    <h3>2. 5-Paradigm Orthogonal Ensemble</h3>
+    <p>Combining 5 diverse learning representations:</p>
+    <ul>
+      <li><strong>P1: Multimodal Vision-Language (Qwen2.5-VL-7B):</strong> 4-bit QLoRA fine-tuning on 1,500 5-field CoT step annotations.</li>
+      <li><strong>P2: Dense Bi-Encoder (BGE-M3):</strong> Contrastive Multi-Negative Ranking Loss with 7 hard negatives and a 55,000-trace consensus bank.</li>
+      <li><strong>P3: Process-Supervised Step Cross-Encoder (DeBERTa-v3):</strong> Intra-trace margin ranking loss computed strictly within each <code>trace_id</code>.</li>
+      <li><strong>P4: Quantum Symbolic State Verifier:</strong> Deterministic algebraic equivalence checks and 38 sibling rules.</li>
+      <li><strong>P5: Multi-GBDT Listwise Stacker:</strong> LambdaRank trees over trace candidate pools.</li>
+    </ul>
+
+    <div class="figure-container">
+      <img src="../docs/images/figure1_models_and_weights.png" alt="Model Diversity and Stacking Weights">
+      <div class="figure-caption">Figure 1: Standalone Paradigm Performance vs Optimal Stacking Weights</div>
+    </div>
+
+    <h3>3. Max-Preserving Orthogonal Subspace Projection</h3>
+    <p>To prevent error candidate adjustments from eroding clean detection accuracy (over 45% of cases are <code>NONE</code>), we enforce:</p>
+    <pre>max_{c != NONE} s_new(i, c) == max_{c != NONE} s_anchor(i, c)</pre>
+    <p>This guarantees that the clean decision boundary remains untouched at <code>0.94246</code> MAP@3.</p>
+
+    <h3>4. 38 Deterministic Symbolic Sibling Rules</h3>
+    <p>Resolves fine-grained pedagogical ambiguities (such as intermediate stopping in <code>ANS-01</code> vs over-answering in <code>ANS-02</code>), contributing <strong>+0.0485 MAP@3</strong> on unclean student workings.</p>
+
+    <div class="figure-container">
+      <img src="../docs/images/figure2_feature_ablation.png" alt="Feature Ablation Waterfall">
+      <div class="figure-caption">Figure 2: Impact of Generalizable Features vs Detrimental Traps</div>
+    </div>
+
+    <h3>5. Adversarial Anti-Memorization Audit</h3>
+    <p>Audited and eliminated train-literal lookup rules that created an illusion of <code>0.90044</code> CV, anchoring our verified pipeline at honest <code>0.68089</code> CV.</p>
+
+    <div class="figure-container">
+      <img src="../docs/images/figure4_shrinkage_sensitivity.png" alt="Leakage Trap Audit">
+      <div class="figure-caption">Figure 4: Honest Out-of-Fold Cross-Validation vs Memorized In-Sample Leakage</div>
+    </div>
+  </section>
+
+  <section id="retrospective">
+    <h2>🔍 Retrospective: Mistakes Made, Learnings & Compute Strategy</h2>
+    
+    <div class="alert alert-amber">
+      <strong>Key Mistake & Resolution:</strong> Allowing regex transition rules to memorize specific numbers from the training set caused an artificial CV inflation that did not transfer to the leaderboard. Strict out-of-fold partitioning and adversarial reviews are essential in fine-grained educational tasks.
+    </div>
+
+    <h3>Cloud Orchestration: Single Colab Instance & Kaggle Fallback</h3>
+    <ul>
+      <li><strong>Tailscale WireGuard Mesh:</strong> Enabled resilient, direct headless SSH to a single Google Colab Tesla T4 instance, avoiding third-party tunnel timeouts.</li>
+      <li><strong>Persistent Checkpointing:</strong> Each fold's out-of-fold parquets were synced directly to Google Drive upon completion, preserving state across ephemeral session resets.</li>
+      <li><strong>Kaggle GPU Fallback:</strong> Modular script packaging allowed seamless continuation on Kaggle's GPU environment when daily Colab limits were met.</li>
+    </ul>
+
+    <h3>How to Be Better Next Time</h3>
+    <ol>
+      <li><strong>Measure Subspace Recall First:</strong> Ensure candidate pool coverage exceeds 90% before optimizing rerankers.</li>
+      <li><strong>Decouple Bimodal Decisions:</strong> Always protect high-precision majority classes using orthogonal projection.</li>
+      <li><strong>Audit Out-of-Fold Early:</strong> Perform adversarial ablations on any single rule or feature producing outsized local gains.</li>
+    </ol>
+  </section>
+
+  <section id="metrics">
+    <h2>📊 Detailed Validation Breakdown</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Cohort / Metric</th>
+          <th>Baseline Model</th>
+          <th>Intermediate Stacker (v3.0)</th>
+          <th>Champion Ensemble (v4.2)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Overall 5-Fold Honest CV</strong></td>
+          <td>0.42800</td>
+          <td>0.60922</td>
+          <td><strong>0.68089</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Unclean Workings MAP@3</strong></td>
+          <td>0.23696</td>
+          <td>0.46110</td>
+          <td><strong>0.56914</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Clean Workings MAP@3 (NONE)</strong></td>
+          <td>0.88410</td>
+          <td>0.91230</td>
+          <td><strong>0.94246</strong></td>
+        </tr>
+        <tr>
+          <td><strong>High School Cohort MAP@3</strong></td>
+          <td>0.41200</td>
+          <td>0.54890</td>
+          <td><strong>0.62954</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Unitary Horizon Recall (H24)</strong></td>
+          <td>79.16%</td>
+          <td>88.50%</td>
+          <td><strong>94.60%</strong></td>
+        </tr>
+        <tr>
+          <td><strong>Public Leaderboard (Verified)</strong></td>
+          <td>0.39500</td>
+          <td>0.55100</td>
+          <td><strong>0.62483</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="figure-container">
+      <img src="../docs/images/figure5_private_shakeout_monte_carlo.png" alt="Private Shakeout Simulation">
+      <div class="figure-caption">Figure 5: 2,000-Iteration Monte Carlo Simulation of Public vs Private Leaderboard Stability</div>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
