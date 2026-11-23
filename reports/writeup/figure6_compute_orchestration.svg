@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1550" height="560" viewBox="0 0 1550 560">
+
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Helvetica Neue', Arial, sans-serif; }
+      .mono { font-family: 'SF Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace; }
+    </style>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <filter id="shadow-sm" x="-3%" y="-3%" width="106%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#be123c"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+    <marker id="arrowSlate" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748b"/>
+    </marker>
+    <marker id="arrowEmerald" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#059669"/>
+    </marker>
+    <marker id="arrowIndigo" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4f46e5"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0284c7"/>
+    </marker>
+  </defs>
+
+<rect width="1550" height="560" fill="#f8fafc"/>
+<g filter="url(#shadow)">
+  <rect x="24" y="18" width="1502" height="68" rx="12" fill="url(#headerGrad)"/>
+  <text x="46" y="47" fill="#ffffff" font-size="19" font-weight="800">RESILIENT CLOUD COMPUTE ORCHESTRATION: TAILSCALE WIREGUARD MESH &amp; KAGGLE FALLBACK</text>
+  <text x="46" y="69" fill="#94a3b8" font-size="12.5" font-weight="500">How we trained 7B Multimodal QLoRA (Qwen2.5-VL) and FP32 DeBERTa-v3-Large on a single Google Colab account with zero lost work</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="24" y="112" width="350" height="340" rx="10" fill="#ffffff" stroke="#475569" stroke-width="1.8"/>
+  <path d="M 24 122 Q 24 112 34 112 L 364 112 Q 374 112 374 122 L 374 146 L 24 146 Z" fill="#1e293b"/>
+  <text x="38" y="133.5" fill="#ffffff" font-size="13" font-weight="700">1. Local Control Workstation</text>
+  <rect x="280.0" y="119.0" width="84.0" height="20" rx="10" fill="#475569"/>
+  <text x="322.0" y="133.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">macOS Host</text>
+  <text x="38" y="178.94285714285715" fill="#334155" font-size="11.8" font-weight="500">• Git Worktree Branch Isolation</text>
+  <text x="38" y="220.65714285714284" fill="#334155" font-size="11.8" font-weight="500">• uv Reproducible Lockfile Sync</text>
+  <text x="38" y="262.37142857142857" fill="#334155" font-size="11.8" font-weight="500">• AST Anti-Slop &amp; Secret Linter</text>
+  <text x="38" y="304.0857142857143" fill="#334155" font-size="11.8" font-weight="500">• 8.33 MB Tarball Code Packager</text>
+  <text x="38" y="345.8" fill="#334155" font-size="11.8" font-weight="500">• Headless SSH Runner Daemon</text>
+  <text x="38" y="387.51428571428573" fill="#334155" font-size="11.8" font-weight="500">• Automated 6-Gate Local Audit</text>
+  <text x="38" y="429.22857142857146" fill="#0f172a" font-size="11.8" font-weight="700">★ Zero Manual Browser Clicking</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="408" y="112" width="350" height="340" rx="10" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.8"/>
+  <path d="M 408 122 Q 408 112 418 112 L 748 112 Q 758 112 758 122 L 758 146 L 408 146 Z" fill="#0284c7"/>
+  <text x="422" y="133.5" fill="#ffffff" font-size="13" font-weight="700">2. Tailscale WireGuard P2P Mesh</text>
+  <rect x="643.6" y="119.0" width="104.39999999999999" height="20" rx="10" fill="#0369a1"/>
+  <text x="695.8000000000001" y="133.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">100.x Mesh IP</text>
+  <text x="422" y="178.94285714285715" fill="#334155" font-size="11.8" font-weight="500">• Direct Encrypted WireGuard Tunnel</text>
+  <text x="422" y="220.65714285714284" fill="#334155" font-size="11.8" font-weight="500">• Eliminates ngrok / localtunnel</text>
+  <text x="422" y="262.37142857142857" fill="#334155" font-size="11.8" font-weight="500">  bandwidth caps &amp; timeout disconnects</text>
+  <text x="422" y="304.0857142857143" fill="#334155" font-size="11.8" font-weight="500">• Persistent Node Routing Across</text>
+  <text x="422" y="345.8" fill="#334155" font-size="11.8" font-weight="500">  Colab Runtime Reconnections</text>
+  <text x="422" y="387.51428571428573" fill="#334155" font-size="11.8" font-weight="500">• Automated tmux + rsync Telemetry</text>
+  <text x="422" y="429.22857142857146" fill="#0f172a" font-size="11.8" font-weight="700">★ 0 Tunnel Drops Across 5 Folds</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="792" y="112" width="350" height="340" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="1.8"/>
+  <path d="M 792 122 Q 792 112 802 112 L 1132 112 Q 1142 112 1142 122 L 1142 146 L 792 146 Z" fill="#059669"/>
+  <text x="806" y="133.5" fill="#ffffff" font-size="13" font-weight="700">3. Primary Google Colab T4 Node</text>
+  <rect x="1027.6" y="119.0" width="104.39999999999999" height="20" rx="10" fill="#047857"/>
+  <text x="1079.8" y="133.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">Tesla T4 16GB</text>
+  <text x="806" y="178.94285714285715" fill="#334155" font-size="11.8" font-weight="500">• Qwen2.5-VL-7B 4-Bit NF4 QLoRA</text>
+  <text x="806" y="220.65714285714284" fill="#334155" font-size="11.8" font-weight="500">• DeBERTa-v3 Forced FP32 Mode</text>
+  <text x="806" y="262.37142857142857" fill="#334155" font-size="11.8" font-weight="500">  (Prevents Turing NaN Underflow)</text>
+  <text x="806" y="304.0857142857143" fill="#334155" font-size="11.8" font-weight="500">• ~18m Train + ~15m Scoring / Fold</text>
+  <text x="806" y="345.8" fill="#334155" font-size="11.8" font-weight="500">• Atomic Fold-by-Fold OOF Parquet</text>
+  <text x="806" y="387.51428571428573" fill="#334155" font-size="11.8" font-weight="500">  Checkpointing to Google Drive</text>
+  <text x="806" y="429.22857142857146" fill="#0f172a" font-size="11.8" font-weight="700">★ Instant Fold Resume on Reset</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="1176" y="112" width="350" height="340" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/>
+  <path d="M 1176 122 Q 1176 112 1186 112 L 1516 112 Q 1526 112 1526 122 L 1526 146 L 1176 146 Z" fill="#7c3aed"/>
+  <text x="1190" y="133.5" fill="#ffffff" font-size="13" font-weight="700">4. Kaggle GPU Quota Fallback</text>
+  <rect x="1418.4" y="119.0" width="97.6" height="20" rx="10" fill="#6d28d9"/>
+  <text x="1467.2" y="133.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">Quota Shield</text>
+  <text x="1190" y="178.94285714285715" fill="#334155" font-size="11.8" font-weight="500">• Automated Kernel Push CLI</text>
+  <text x="1190" y="220.65714285714284" fill="#334155" font-size="11.8" font-weight="500">• Offline Wheel &amp; Package Tarball</text>
+  <text x="1190" y="262.37142857142857" fill="#334155" font-size="11.8" font-weight="500">• Clean PYTHONPATH Injection</text>
+  <text x="1190" y="304.0857142857143" fill="#334155" font-size="11.8" font-weight="500">  (Avoids __future__ Syntax Traps)</text>
+  <text x="1190" y="345.8" fill="#334155" font-size="11.8" font-weight="500">• Seamless Overflow Execution</text>
+  <text x="1190" y="387.51428571428573" fill="#334155" font-size="11.8" font-weight="500">  When Colab Hits Daily Quota</text>
+  <text x="1190" y="429.22857142857146" fill="#0f172a" font-size="11.8" font-weight="700">★ 100% Bit-Exact Reproducibility</text>
+</g>
+<line x1="374" y1="282" x2="404" y2="282" stroke="#0284c7" stroke-width="3" marker-end="url(#arrowBlue)"/>
+<line x1="758" y1="282" x2="788" y2="282" stroke="#059669" stroke-width="3" marker-end="url(#arrowEmerald)"/>
+<line x1="1142" y1="282" x2="1172" y2="282" stroke="#4f46e5" stroke-width="3" stroke-dasharray="6,4" marker-end="url(#arrowIndigo)"/>
+<rect x="24" y="474" width="1502" height="62" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+<text x="48" y="500" fill="#0f172a" font-size="13" font-weight="800">⚡ Key Systems Engineering Invariants:</text>
+<text x="48" y="521" fill="#334155" font-size="12" font-weight="500">1. Fold-Atomic Checkpointing: Every fold persists OOF parquets to Google Drive immediately  |  2. Precision Guard: assert torch.isfinite(loss) blocks Turing FP16 underflow  |  3. Clean Packaging: PYTHONPATH injection replaces brittle script prepending</text>
+</svg>

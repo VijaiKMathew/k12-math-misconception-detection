@@ -1,0 +1,21 @@
+{
+  "label": "s6e10-qaggle-unitary-5paradigm-global-optima-stacker-v4.2",
+  "competition": "misconception-detection-in-k-12-student-math-workings",
+  "source": "submission.csv",
+  "lb_score": 0.62483,
+  "lb_ref": 58394418,
+  "submission_status": "verified_on_lb",
+  "best_verified_public_lb": 0.62483,
+  "best_verified_lb_ref": 58314170,
+  "cv_score": 0.68089,
+  "updated": "2026-11-15",
+  "note": "Wave-2/3 Neural Sync & Conservative Orthogonal Stacking. Verified All-Time Best Public LB: 0.62483 (ref 58394418 / 58314170). Honest 5-fold CV: 0.68089, Unclean: 0.56914, Clean: 0.94246, High School: 0.62954, Bottleneck-5: 0.56190, Top-1 Acc: 62.13%, Top-3 Recall: 75.73%.",
+  "files": [
+    {
+      "path": "submission.csv",
+      "role": "submission",
+      "bytes": 116979,
+      "sha256": "66f7df180f400df3d2360591ab3384965c0324c2e14e5221c497cc8783103cf0"
+    }
+  ]
+}

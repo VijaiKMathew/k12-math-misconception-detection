@@ -46,21 +46,37 @@ Detecting mathematical misconceptions in handwritten student workings presents a
 
 ---
 
-## 🛠️ Quickstart & Replication
+## 🛠️ Quickstart & Replication (via `make` & `uv`)
 
+### 1. Prerequisites
+Ensure you have [uv](https://github.com/astral-sh/uv) and the [Kaggle CLI](https://github.com/Kaggle/kaggle-api) installed:
 ```bash
-# 1. Clone repository
+curl -LsSf https://astral.sh/uv/install.sh | sh
+pip install kaggle
+```
+
+### 2. Complete 1-Command Verification
+```bash
+# Clone repository
 git clone https://github.com/VijaiKMathew/k12-math-misconception-detection.git
 cd k12-math-misconception-detection
 
-# 2. View full writeup and walkthrough
-cat WRITEUP.md
+# Run automated 1-command verification suite
+bash run.sh
 ```
 
-To run the interactive demonstration and verify MAP@3 metrics locally:
-```bash
-jupyter notebook notebooks/misconception_detection_champion_masterclass.ipynb
-```
+*Individual `make` targets:*
+- `make setup` — Sync virtual environment with locked dependencies via `uv`
+- `make check` — Verify champion metadata checksums and run secrets scan
+- `make report` — Verify standalone interactive HTML solution preview
+- `make clean` — Remove transient caches and bytecode
+
+### 3. Interactive Walkthroughs & Documentation
+- 📖 **Full Technical Solution:** [WRITEUP.md](WRITEUP.md)
+- 📓 **Champion Masterclass Notebook:** [notebooks/misconception_detection_champion_masterclass.ipynb](notebooks/misconception_detection_champion_masterclass.ipynb)
+- 📊 **Interactive Showcase:** [reports/solution_preview.html](reports/solution_preview.html)
+- 🔄 **Asset Recreation Playbook:** [docs/RECREATION_PLAYBOOK.md](docs/RECREATION_PLAYBOOK.md)
+- 📜 **Lifecycle & Retention Policy:** [docs/KAGGLE_PROJECT_LIFECYCLE_AND_RETENTION_POLICY.md](docs/KAGGLE_PROJECT_LIFECYCLE_AND_RETENTION_POLICY.md)
 
 ---
 

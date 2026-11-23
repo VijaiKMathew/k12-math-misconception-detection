@@ -1,0 +1,16 @@
+{
+  "slug": "misconception-detection-in-k-12-student-math-workings",
+  "title": "Misconception Detection in K-12 Student Math Workings",
+  "host": "CoLearn Lab / Kaggle",
+  "metric": "MAP@3",
+  "metric_direction": "higher",
+  "target_column": "root_code",
+  "id_column": "trace_id",
+  "expected_test_rows": 3498,
+  "expected_train_rows": 1500,
+  "deadline": "2026-11-17T00:00:00Z",
+  "max_daily_submissions": 5,
+  "max_team_size": 10,
+  "submission_file": "submission.csv",
+  "baseline_score": 0.49133
+}

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="680" viewBox="0 0 1500 680">
+
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Helvetica Neue', Arial, sans-serif; }
+      .mono { font-family: 'SF Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace; }
+    </style>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <filter id="shadow-sm" x="-3%" y="-3%" width="106%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#be123c"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+    <marker id="arrowSlate" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748b"/>
+    </marker>
+    <marker id="arrowEmerald" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#059669"/>
+    </marker>
+    <marker id="arrowIndigo" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4f46e5"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0284c7"/>
+    </marker>
+  </defs>
+
+<rect width="1500" height="680" fill="#f8fafc"/>
+<g filter="url(#shadow)">
+  <rect x="24" y="18" width="1452" height="62" rx="12" fill="url(#headerGrad)"/>
+  <text x="46" y="47" fill="#ffffff" font-size="19" font-weight="800">ARCHITECTURAL ABLATION WATERFALL: WHAT HELPED VS. WHAT HURT (Δ MAP@3)</text>
+  <text x="46" y="67" fill="#94a3b8" font-size="12.5" font-weight="500">Strict out-of-fold ablation across all 9 key architectural decisions — green mechanisms generalize; red patterns fail on unseen test traces</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="24" y="96" width="1452" height="560" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+</g>
+<rect x="420" y="150" width="750.2857142857142" height="445" fill="#fff1f2" opacity="0.55"/>
+<rect x="1170.2857142857142" y="150" width="259.7142857142858" height="445" fill="#ecfdf5" opacity="0.55"/>
+<text x="795.1428571428571" y="136" fill="#be123c" font-size="13" font-weight="800" text-anchor="middle">❌ HARMFUL TRAPS &amp; ANTI-PATTERNS (DEGRADED GENERALIZATION)</text>
+<text x="1300.142857142857" y="136" fill="#047857" font-size="13" font-weight="800" text-anchor="middle">✅ GENERALIZABLE BREAKTHROUGHS (VERIFIED OOF + LB LIFT)</text>
+<line x1="448.8571428571429" y1="150" x2="448.8571428571429" y2="595" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="448.8571428571429" y="617" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="middle" class="mono">-0.25</text>
+<line x1="593.1428571428571" y1="150" x2="593.1428571428571" y2="595" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="593.1428571428571" y="617" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="middle" class="mono">-0.20</text>
+<line x1="737.4285714285716" y1="150" x2="737.4285714285716" y2="595" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="737.4285714285716" y="617" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="middle" class="mono">-0.15</text>
+<line x1="881.7142857142858" y1="150" x2="881.7142857142858" y2="595" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="881.7142857142858" y="617" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="middle" class="mono">-0.10</text>
+<line x1="1026.0" y1="150" x2="1026.0" y2="595" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="1026.0" y="617" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="middle" class="mono">-0.05</text>
+<line x1="1170.2857142857142" y1="150" x2="1170.2857142857142" y2="595" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="1170.2857142857142" y="617" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="middle" class="mono">+0.00</text>
+<line x1="1314.5714285714287" y1="150" x2="1314.5714285714287" y2="595" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="1314.5714285714287" y="617" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="middle" class="mono">+0.05</text>
+<line x1="1170.2857142857142" y1="150" x2="1170.2857142857142" y2="595" stroke="#0f172a" stroke-width="2.2"/>
+<text x="925.0" y="641" fill="#0f172a" font-size="13" font-weight="700" text-anchor="middle">Net Impact on Out-of-Fold Generalization MAP@3 (Δ Score)</text>
+<text x="404" y="172.72222222222223" fill="#0f172a" font-size="12.5" font-weight="700" text-anchor="end">38 Symbolic Sibling Disambiguation Rules</text>
+<text x="404" y="187.72222222222223" fill="#64748b" font-size="10.5" font-weight="500" text-anchor="end">Resolves ANS-01/02, KPF-01/02, Dec-01/02 pairs</text>
+<rect x="1170.2857142857142" y="159.72222222222223" width="139.95714285714303" height="30" rx="6" fill="url(#emeraldGrad)" stroke="#047857" stroke-width="1.4"/>
+<text x="1320.2428571428572" y="179.72222222222223" fill="#065f46" font-size="12.5" font-weight="800" class="mono">+0.0485</text>
+<text x="404" y="222.16666666666666" fill="#0f172a" font-size="12.5" font-weight="700" text-anchor="end">55,000-Trace Classmate Consensus Bank</text>
+<text x="404" y="237.16666666666666" fill="#64748b" font-size="10.5" font-weight="500" text-anchor="end">95.71% shared question_id modal step reference</text>
+<rect x="1170.2857142857142" y="209.16666666666666" width="98.69142857142879" height="30" rx="6" fill="url(#emeraldGrad)" stroke="#047857" stroke-width="1.4"/>
+<text x="1278.977142857143" y="229.16666666666666" fill="#065f46" font-size="12.5" font-weight="800" class="mono">+0.0342</text>
+<text x="404" y="271.6111111111111" fill="#0f172a" font-size="12.5" font-weight="700" text-anchor="end">Max-Preserving Orthogonal Projection (P^perp)</text>
+<text x="404" y="286.6111111111111" fill="#64748b" font-size="10.5" font-weight="500" text-anchor="end">Locks Clean Gate boundary at 0.94246</text>
+<rect x="1170.2857142857142" y="258.6111111111111" width="85.99428571428598" height="30" rx="6" fill="url(#emeraldGrad)" stroke="#047857" stroke-width="1.4"/>
+<text x="1266.2800000000002" y="278.6111111111111" fill="#065f46" font-size="12.5" font-weight="800" class="mono">+0.0298</text>
+<text x="404" y="321.05555555555554" fill="#0f172a" font-size="12.5" font-weight="700" text-anchor="end">Line-Level Step-Diff Delta Supervision</text>
+<text x="404" y="336.05555555555554" fill="#64748b" font-size="10.5" font-weight="500" text-anchor="end">Pinpoints exact first divergent line L_k</text>
+<rect x="1170.2857142857142" y="308.05555555555554" width="62.04285714285743" height="30" rx="6" fill="url(#emeraldGrad)" stroke="#047857" stroke-width="1.4"/>
+<text x="1242.3285714285716" y="328.05555555555554" fill="#065f46" font-size="12.5" font-weight="800" class="mono">+0.0215</text>
+<text x="404" y="370.5" fill="#0f172a" font-size="12.5" font-weight="700" text-anchor="end">Intra-Trace Margin Ranking Loss</text>
+<text x="404" y="385.5" fill="#64748b" font-size="10.5" font-weight="500" text-anchor="end">Eliminates global CAL-01/ANS-01 prior bias</text>
+<rect x="1170.2857142857142" y="357.5" width="51.94285714285729" height="30" rx="6" fill="url(#emeraldGrad)" stroke="#047857" stroke-width="1.4"/>
+<text x="1232.2285714285715" y="377.5" fill="#065f46" font-size="12.5" font-weight="800" class="mono">+0.0180</text>
+<text x="404" y="419.94444444444446" fill="#0f172a" font-size="12.5" font-weight="700" text-anchor="end">Raw Unprojected Probability Blending</text>
+<text x="404" y="434.94444444444446" fill="#64748b" font-size="10.5" font-weight="500" text-anchor="end">Shifts max error logit above NONE threshold</text>
+<rect x="1059.1857142857143" y="406.94444444444446" width="111.09999999999991" height="30" rx="6" fill="url(#roseGrad)" stroke="#9f1239" stroke-width="1.4"/>
+<text x="1049.1857142857143" y="426.94444444444446" fill="#9f1239" font-size="12.5" font-weight="800" text-anchor="end" class="mono">-0.0385</text>
+<text x="404" y="469.38888888888886" fill="#0f172a" font-size="12.5" font-weight="700" text-anchor="end">Text-Only LLM on OCR-Less Test Set</text>
+<text x="404" y="484.38888888888886" fill="#64748b" font-size="10.5" font-weight="500" text-anchor="end">Hallucinates missing transcription_steps</text>
+<rect x="1020.2285714285715" y="456.38888888888886" width="150.0571428571427" height="30" rx="6" fill="url(#roseGrad)" stroke="#9f1239" stroke-width="1.4"/>
+<text x="1010.2285714285715" y="476.38888888888886" fill="#9f1239" font-size="12.5" font-weight="800" text-anchor="end" class="mono">-0.0520</text>
+<text x="404" y="518.8333333333333" fill="#0f172a" font-size="12.5" font-weight="700" text-anchor="end">Frozen Top-8 Pool Without H24 Expansion</text>
+<text x="404" y="533.8333333333333" fill="#64748b" font-size="10.5" font-weight="500" text-anchor="end">Caps unclean candidate recall at 79.16%</text>
+<rect x="965.4000000000001" y="505.83333333333326" width="204.88571428571413" height="30" rx="6" fill="url(#roseGrad)" stroke="#9f1239" stroke-width="1.4"/>
+<text x="955.4000000000001" y="525.8333333333333" fill="#9f1239" font-size="12.5" font-weight="800" text-anchor="end" class="mono">-0.0710</text>
+<text x="404" y="568.2777777777778" fill="#0f172a" font-size="12.5" font-weight="700" text-anchor="end">Train-Literal Regex Memorization Trap</text>
+<text x="404" y="583.2777777777778" fill="#64748b" font-size="10.5" font-weight="500" text-anchor="end">Fake 0.90044 in-sample CV; collapses on test LB</text>
+<rect x="536.5828571428572" y="555.2777777777778" width="633.702857142857" height="30" rx="6" fill="url(#roseGrad)" stroke="#9f1239" stroke-width="1.4"/>
+<text x="526.5828571428572" y="575.2777777777778" fill="#9f1239" font-size="12.5" font-weight="800" text-anchor="end" class="mono">-0.2196</text>
+</svg>

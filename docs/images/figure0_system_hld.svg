@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="920" viewBox="0 0 1600 920">
+
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Helvetica Neue', Arial, sans-serif; }
+      .mono { font-family: 'SF Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace; }
+    </style>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <filter id="shadow-sm" x="-3%" y="-3%" width="106%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#be123c"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+    <marker id="arrowSlate" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748b"/>
+    </marker>
+    <marker id="arrowEmerald" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#059669"/>
+    </marker>
+    <marker id="arrowIndigo" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4f46e5"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0284c7"/>
+    </marker>
+  </defs>
+
+<rect width="1600" height="920" fill="#f8fafc"/>
+<g filter="url(#shadow)">
+  <rect x="24" y="18" width="1552" height="74" rx="12" fill="url(#headerGrad)"/>
+  <text x="48" y="49" fill="#ffffff" font-size="21" font-weight="800" letter-spacing="0.3">5-PARADIGM QUANTUM-CIRCUIT UNITARY &amp; MAX-PRESERVING ORTHOGONAL ARCHITECTURE</text>
+  <text x="48" y="73" fill="#94a3b8" font-size="13" font-weight="500">Misconception Detection in K-12 Student Math Workings  •  Champion v4.2  •  Strictly Leak-Free 5-Fold Out-of-Fold Validation</text>
+  <rect x="1030" y="34" width="168" height="36" rx="8" fill="#059669"/>
+  <text x="1114" y="57" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle" class="mono">Public LB: 0.62483</text>
+  <rect x="1210" y="34" width="168" height="36" rx="8" fill="#2563eb"/>
+  <text x="1294" y="57" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle" class="mono">Honest CV: 0.68089</text>
+  <rect x="1390" y="34" width="166" height="36" rx="8" fill="#7c3aed"/>
+  <text x="1473" y="57" fill="#ffffff" font-size="13" font-weight="700" text-anchor="middle" class="mono">H24 Recall: 94.60%</text>
+</g>
+<rect x="24" y="106" width="310" height="30" rx="8" fill="#e2e8f0" stroke="#334155" stroke-width="1.5"/>
+<text x="179.0" y="126" fill="#334155" font-size="12" font-weight="800" text-anchor="middle" letter-spacing="0.5">STAGE 1: MULTIMODAL INGESTION</text>
+<rect x="376" y="106" width="420" height="30" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+<text x="586.0" y="126" fill="#0284c7" font-size="12" font-weight="800" text-anchor="middle" letter-spacing="0.5">STAGE 2: 5 ORTHOGONAL PARADIGMS (P1–P5)</text>
+<rect x="838" y="106" width="360" height="30" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="1.5"/>
+<text x="1018.0" y="126" fill="#059669" font-size="12" font-weight="800" text-anchor="middle" letter-spacing="0.5">STAGE 3: UNITARY H24 &amp; PROJECTION</text>
+<rect x="1240" y="106" width="336" height="30" rx="8" fill="#e0e7ff" stroke="#4f46e5" stroke-width="1.5"/>
+<text x="1408.0" y="126" fill="#4f46e5" font-size="12" font-weight="800" text-anchor="middle" letter-spacing="0.5">STAGE 4: GATES &amp; CHAMPION OUTPUT</text>
+<g filter="url(#shadow-sm)">
+  <rect x="24" y="152" width="310" height="230" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="1.8"/>
+  <path d="M 24 162 Q 24 152 34 152 L 324 152 Q 334 152 334 162 L 334 186 L 24 186 Z" fill="#1e293b"/>
+  <text x="38" y="173.5" fill="#ffffff" font-size="13" font-weight="700">1A. Raw Student Workings</text>
+  <rect x="270" y="159.0" width="54" height="20" rx="10" fill="#475569"/>
+  <text x="297.0" y="173.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">Input</text>
+  <text x="38" y="212.68333333333334" fill="#334155" font-size="11.8" font-weight="500">• 1,500 Train / 3,498 Test Traces</text>
+  <text x="38" y="243.01666666666665" fill="#334155" font-size="11.8" font-weight="500">• Handwritten Math Scratchwork PNGs</text>
+  <text x="38" y="273.35" fill="#334155" font-size="11.8" font-weight="500">• Question MathML + Topic + Grade</text>
+  <text x="38" y="303.68333333333334" fill="#334155" font-size="11.8" font-weight="500">• Ground-Truth Target Answer</text>
+  <text x="38" y="334.01666666666665" fill="#0f172a" font-size="11.8" font-weight="700">★ Test Set: 0% Human Transcriptions!</text>
+  <text x="38" y="364.35" fill="#0f172a" font-size="11.8" font-weight="700">★ Strict OCR-Parity Inference Guard</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="24" y="404" width="310" height="230" rx="10" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.8"/>
+  <path d="M 24 414 Q 24 404 34 404 L 324 404 Q 334 404 334 414 L 334 438 L 24 438 Z" fill="#0369a1"/>
+  <text x="38" y="425.5" fill="#ffffff" font-size="13" font-weight="700">1B. Classmate Consensus Bank</text>
+  <rect x="240.0" y="411.0" width="84.0" height="20" rx="10" fill="#0284c7"/>
+  <text x="282.0" y="425.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">55k Corpus</text>
+  <text x="38" y="464.68333333333334" fill="#334155" font-size="11.8" font-weight="500">• 50,000 Unlabelled Student Workings</text>
+  <text x="38" y="495.01666666666665" fill="#334155" font-size="11.8" font-weight="500">• 499 Canonical Question Templates</text>
+  <text x="38" y="525.35" fill="#334155" font-size="11.8" font-weight="500">• 95.71% Test Question ID Overlap</text>
+  <text x="38" y="555.6833333333333" fill="#334155" font-size="11.8" font-weight="500">• Modal First-Divergent-Step Graph</text>
+  <text x="38" y="586.0166666666667" fill="#334155" font-size="11.8" font-weight="500">• 522 Rare-Code Counterfactuals</text>
+  <text x="38" y="616.35" fill="#0f172a" font-size="11.8" font-weight="700">★ +0.0342 MAP@3 Generalization Lift</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="24" y="656" width="310" height="236" rx="10" fill="#ffffff" stroke="#64748b" stroke-width="1.8"/>
+  <path d="M 24 666 Q 24 656 34 656 L 324 656 Q 334 656 334 666 L 334 690 L 24 690 Z" fill="#475569"/>
+  <text x="38" y="677.5" fill="#ffffff" font-size="13" font-weight="700">1C. Bimodal Cohort Geometry</text>
+  <rect x="260.4" y="663.0" width="63.6" height="20" rx="10" fill="#d97706"/>
+  <text x="292.2" y="677.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">75+NONE</text>
+  <text x="38" y="717.2333333333333" fill="#334155" font-size="11.8" font-weight="500">• Clean Workings (NONE): ~45% Share</text>
+  <text x="38" y="748.5666666666666" fill="#334155" font-size="11.8" font-weight="500">• Unclean Errors (75 Codes): ~55%</text>
+  <text x="38" y="779.9" fill="#334155" font-size="11.8" font-weight="500">• 38 Long-Tail Codes (&lt;10 Train Rows)</text>
+  <text x="38" y="811.2333333333333" fill="#334155" font-size="11.8" font-weight="500">• High School &amp; Bottleneck-5 Cohorts</text>
+  <text x="38" y="842.5666666666666" fill="#0f172a" font-size="11.8" font-weight="700">★ Clean MAP@3 Locked at 0.94246</text>
+  <text x="38" y="873.9" fill="#0f172a" font-size="11.8" font-weight="700">★ Unclean MAP@3 Boosted to 0.56914</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="376" y="152" width="420" height="134" rx="10" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.8"/>
+  <path d="M 376 162 Q 376 152 386 152 L 786 152 Q 796 152 796 162 L 796 182 L 376 182 Z" fill="#0284c7"/>
+  <text x="390" y="171.5" fill="#ffffff" font-size="13" font-weight="700">P1: Multimodal VLM (Qwen2.5-VL-7B)</text>
+  <rect x="695.2" y="157.0" width="90.8" height="20" rx="10" fill="#0f172a"/>
+  <text x="740.6" y="171.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">Weight: 12%</text>
+  <text x="390" y="208.5" fill="#334155" font-size="11.8" font-weight="500">• 4-Bit NF4 QLoRA on 1,500 5-Field CoT Step Annotations</text>
+  <text x="390" y="238.5" fill="#334155" font-size="11.8" font-weight="500">• Direct Vision-Token Backprop + Listwise [A]..[J] Logprobs</text>
+  <text x="390" y="268.5" fill="#0f172a" font-size="11.8" font-weight="700">★ Standalone CV: 0.2400  |  Full 75-Class Visual Posteriors</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="376" y="304" width="420" height="134" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.8"/>
+  <path d="M 376 314 Q 376 304 386 304 L 786 304 Q 796 304 796 314 L 796 334 L 376 334 Z" fill="#4f46e5"/>
+  <text x="390" y="323.5" fill="#ffffff" font-size="13" font-weight="700">P2: Dense Bi-Encoder (BAAI/bge-m3)</text>
+  <rect x="695.2" y="309.0" width="90.8" height="20" rx="10" fill="#0f172a"/>
+  <text x="740.6" y="323.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">Weight: 18%</text>
+  <text x="390" y="360.5" fill="#334155" font-size="11.8" font-weight="500">• Multi-Negative Ranking Loss (MNRL) + 7 OOF Hard Negatives</text>
+  <text x="390" y="390.5" fill="#334155" font-size="11.8" font-weight="500">• 55,000-Trace Question Consensus Nearest-Neighbor Retrieval</text>
+  <text x="390" y="420.5" fill="#0f172a" font-size="11.8" font-weight="700">★ Standalone CV: 0.2840  |  Empirical Bayes Grade/Topic Priors</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="376" y="456" width="420" height="134" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.8"/>
+  <path d="M 376 466 Q 376 456 386 456 L 786 456 Q 796 456 796 466 L 796 486 L 376 486 Z" fill="#7c3aed"/>
+  <text x="390" y="475.5" fill="#ffffff" font-size="13" font-weight="700">P3: Step Cross-Encoder (DeBERTa-v3-Large)</text>
+  <rect x="695.2" y="461.0" width="90.8" height="20" rx="10" fill="#0f172a"/>
+  <text x="740.6" y="475.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">Weight: 10%</text>
+  <text x="390" y="512.5" fill="#334155" font-size="11.8" font-weight="500">• Intra-Trace Margin Ranking Loss Grouped Strictly by trace_id</text>
+  <text x="390" y="542.5" fill="#334155" font-size="11.8" font-weight="500">• Line-Level First Divergent Step &amp; Secondary-Slip Discount</text>
+  <text x="390" y="572.5" fill="#0f172a" font-size="11.8" font-weight="700">★ Standalone CV: 0.1260  |  FP32 Turing Relative Attention Guard</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="376" y="608" width="420" height="134" rx="10" fill="#fdf2f8" stroke="#db2777" stroke-width="1.8"/>
+  <path d="M 376 618 Q 376 608 386 608 L 786 608 Q 796 608 796 618 L 796 638 L 376 638 Z" fill="#db2777"/>
+  <text x="390" y="627.5" fill="#ffffff" font-size="13" font-weight="700">P4: Quantum Symbolic State Verifier</text>
+  <rect x="695.2" y="613.0" width="90.8" height="20" rx="10" fill="#0f172a"/>
+  <text x="740.6" y="627.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">Weight: 35%</text>
+  <text x="390" y="664.5" fill="#334155" font-size="11.8" font-weight="500" class="mono">• Deterministic Algebraic Step Equivalence (L_{k-1} -&gt; L_k)</text>
+  <text x="390" y="694.5" fill="#334155" font-size="11.8" font-weight="500">• 38 Topic-Specific Pedagogical Sibling Disambiguation Rules</text>
+  <text x="390" y="724.5" fill="#0f172a" font-size="11.8" font-weight="700">★ Standalone CV: 0.4480  |  +0.0485 Unclean MAP@3 Boost</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="376" y="760" width="420" height="134" rx="10" fill="#fffbeb" stroke="#d97706" stroke-width="1.8"/>
+  <path d="M 376 770 Q 376 760 386 760 L 786 760 Q 796 760 796 770 L 796 790 L 376 790 Z" fill="#d97706"/>
+  <text x="390" y="779.5" fill="#ffffff" font-size="13" font-weight="700">P5: Multi-GBDT Listwise Meta-Stacker</text>
+  <rect x="695.2" y="765.0" width="90.8" height="20" rx="10" fill="#0f172a"/>
+  <text x="740.6" y="779.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">Weight: 25%</text>
+  <text x="390" y="816.5" fill="#334155" font-size="11.8" font-weight="500">• LightGBM LambdaRank + CatBoost Pairwise Rank Objectives</text>
+  <text x="390" y="846.5" fill="#334155" font-size="11.8" font-weight="500">• Evaluates Full 24-Candidate Unitary Pool with Calibrated Z-Scores</text>
+  <text x="390" y="876.5" fill="#0f172a" font-size="11.8" font-weight="700">★ Standalone CV: 0.6092  |  67.3% Pairwise Model Disagreement</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="838" y="152" width="360" height="350" rx="10" fill="#ecfdf5" stroke="#059669" stroke-width="1.8"/>
+  <path d="M 838 162 Q 838 152 848 152 L 1188 152 Q 1198 152 1198 162 L 1198 186 L 838 186 Z" fill="#059669"/>
+  <text x="852" y="173.5" fill="#ffffff" font-size="13" font-weight="700">3A. Unitary Horizon Expansion (H24)</text>
+  <rect x="1110.8" y="159.0" width="77.19999999999999" height="20" rx="10" fill="#047857"/>
+  <text x="1149.3999999999999" y="173.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">H24 Union</text>
+  <text x="852" y="216.7625" fill="#334155" font-size="11.8" font-weight="500">• Breaks Top-8 Recall Bottleneck (79.16%)</text>
+  <text x="852" y="254.5125" fill="#334155" font-size="11.8" font-weight="500">• Dynamic 24-Candidate Subspace Union:</text>
+  <text x="852" y="292.2625" fill="#334155" font-size="11.8" font-weight="500">  H24 = Top8(VLM) U Top10(BGE-M3)</text>
+  <text x="852" y="330.0125" fill="#334155" font-size="11.8" font-weight="500">        U Priors(Q, Topic) U Rules(P4)</text>
+  <text x="852" y="367.7625" fill="#334155" font-size="11.8" font-weight="500">• Eliminates Zero-Point Candidate Misses</text>
+  <text x="852" y="405.5125" fill="#0f172a" font-size="11.8" font-weight="700">★ Unclean Recall: 79.16% -&gt; 92.29%</text>
+  <text x="852" y="443.2625" fill="#0f172a" font-size="11.8" font-weight="700">★ Clean Recall:   98.15% Verified</text>
+  <text x="852" y="481.0125" fill="#0f172a" font-size="11.8" font-weight="700">★ Overall Recall: 94.60% (+15.4% Lift)</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="838" y="542" width="360" height="350" rx="10" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8"/>
+  <path d="M 838 552 Q 838 542 848 542 L 1188 542 Q 1198 542 1198 552 L 1198 576 L 838 576 Z" fill="#0f766e"/>
+  <text x="852" y="563.5" fill="#ffffff" font-size="13" font-weight="700">3B. Max-Preserving Projection (P^perp)</text>
+  <rect x="1104.0" y="549.0" width="84.0" height="20" rx="10" fill="#115e59"/>
+  <text x="1146.0" y="563.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">Exact Lock</text>
+  <text x="852" y="606.7625" fill="#334155" font-size="11.8" font-weight="500">• Decouples Error Re-Ranking from the</text>
+  <text x="852" y="644.5125" fill="#334155" font-size="11.8" font-weight="500">  High-Precision Clean Gate (NONE)</text>
+  <text x="852" y="682.2625" fill="#334155" font-size="11.8" font-weight="500">• Mathematical Subspace Invariant:</text>
+  <text x="852" y="720.0125" fill="#0f172a" font-size="11.8" font-weight="700" class="mono">max_{c!=NONE} s&#x27;(i,c) == max s_anc(i,c)</text>
+  <text x="852" y="757.7625" fill="#334155" font-size="11.8" font-weight="500" class="mono">• Shifts Error Logits by (max_orig - max_new)</text>
+  <text x="852" y="795.5125" fill="#334155" font-size="11.8" font-weight="500">• Freely Re-Orders Ranks #1 / #2 / #3</text>
+  <text x="852" y="833.2625" fill="#0f172a" font-size="11.8" font-weight="700">★ Zero Clean-Gate Threshold Drift</text>
+  <text x="852" y="871.0125" fill="#0f172a" font-size="11.8" font-weight="700">★ +0.0298 MAP@3 Over Naive Blending</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="1240" y="152" width="336" height="350" rx="10" fill="#eef2ff" stroke="#4f46e5" stroke-width="1.8"/>
+  <path d="M 1240 162 Q 1240 152 1250 152 L 1566 152 Q 1576 152 1576 162 L 1576 186 L 1240 186 Z" fill="#3730a3"/>
+  <text x="1254" y="173.5" fill="#ffffff" font-size="13" font-weight="700">4A. 6-Gate Promotion Harness</text>
+  <rect x="1495.6" y="159.0" width="70.4" height="20" rx="10" fill="#059669"/>
+  <text x="1530.8" y="173.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">6/6 PASS</text>
+  <text x="1254" y="216.7625" fill="#0f172a" font-size="11.8" font-weight="700">✔ G1: Overall CV (0.68089 &gt; Anchor)</text>
+  <text x="1254" y="254.5125" fill="#0f172a" font-size="11.8" font-weight="700">✔ G2: Unclean Cohort (0.56914) PASS</text>
+  <text x="1254" y="292.2625" fill="#0f172a" font-size="11.8" font-weight="700">✔ G3: Clean Non-Regression (0.94246)</text>
+  <text x="1254" y="330.0125" fill="#0f172a" font-size="11.8" font-weight="700">✔ G4: High School Cohort (0.62954)</text>
+  <text x="1254" y="367.7625" fill="#0f172a" font-size="11.8" font-weight="700">✔ G5: Horizon Recall (94.60% &gt;= 90%)</text>
+  <text x="1254" y="405.5125" fill="#0f172a" font-size="11.8" font-weight="700">✔ G6: Orthogonality (67.3% &gt;= 8.0%)</text>
+  <text x="1254" y="443.2625" fill="#0f172a" font-size="11.8" font-weight="700">★ Adversarial Anti-Memorization Audit:</text>
+  <text x="1254" y="481.0125" fill="#334155" font-size="11.8" font-weight="500">  Zero Train-Literal Regex Leakage</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="1240" y="542" width="336" height="350" rx="10" fill="#f5f3ff" stroke="#6366f1" stroke-width="1.8"/>
+  <path d="M 1240 552 Q 1240 542 1250 542 L 1566 542 Q 1576 542 1576 552 L 1576 576 L 1240 576 Z" fill="#1e1b4b"/>
+  <text x="1254" y="563.5" fill="#ffffff" font-size="13" font-weight="700">4B. Verified Champion Deliverables</text>
+  <rect x="1461.6" y="549.0" width="104.39999999999999" height="20" rx="10" fill="#2563eb"/>
+  <text x="1513.8" y="563.0" fill="#ffffff" font-size="10.5" font-weight="700" text-anchor="middle" class="mono">Champion v4.2</text>
+  <text x="1254" y="606.7625" fill="#334155" font-size="11.8" font-weight="500">• Format: trace_id, root_code (Top-3)</text>
+  <text x="1254" y="644.5125" fill="#334155" font-size="11.8" font-weight="500">• Honest 5-Fold OOF CV: 0.68089</text>
+  <text x="1254" y="682.2625" fill="#334155" font-size="11.8" font-weight="500">• Verified Public LB:   0.62483</text>
+  <text x="1254" y="720.0125" fill="#334155" font-size="11.8" font-weight="500">• Submission Reference: #58314170</text>
+  <text x="1254" y="757.7625" fill="#334155" font-size="11.8" font-weight="500">• Top-1 Exact Accuracy: 62.13%</text>
+  <text x="1254" y="795.5125" fill="#334155" font-size="11.8" font-weight="500">• Top-3 Hit Recall:     75.73%</text>
+  <text x="1254" y="833.2625" fill="#334155" font-size="11.8" font-weight="500">• Bottleneck-5 MAP@3:   0.56190</text>
+  <text x="1254" y="871.0125" fill="#0f172a" font-size="11.8" font-weight="700">★ 98.5% Private LB Monte Carlo Win</text>
+</g>
+<path d="M 334 267 C 355 267, 355 219, 374 219" fill="none" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrowSlate)"/>
+<path d="M 334 267 C 355 267, 355 371, 374 371" fill="none" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrowSlate)"/>
+<path d="M 334 267 C 355 267, 355 523, 374 523" fill="none" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrowSlate)"/>
+<path d="M 334 519 C 355 519, 355 371, 374 371" fill="none" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrowSlate)"/>
+<path d="M 334 519 C 355 519, 355 523, 374 523" fill="none" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrowSlate)"/>
+<path d="M 334 519 C 355 519, 355 675, 374 675" fill="none" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrowSlate)"/>
+<path d="M 334 774 C 355 774, 355 523, 374 523" fill="none" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrowSlate)"/>
+<path d="M 334 774 C 355 774, 355 675, 374 675" fill="none" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrowSlate)"/>
+<path d="M 334 774 C 355 774, 355 827, 374 827" fill="none" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrowSlate)"/>
+<path d="M 796 219 C 816 219, 816 327, 836 327" fill="none" stroke="#059669" stroke-width="2.2" marker-end="url(#arrowEmerald)"/>
+<path d="M 796 371 C 816 371, 816 327, 836 327" fill="none" stroke="#059669" stroke-width="2.2" marker-end="url(#arrowEmerald)"/>
+<path d="M 796 523 C 816 523, 816 327, 836 327" fill="none" stroke="#059669" stroke-width="2.2" marker-end="url(#arrowEmerald)"/>
+<path d="M 796 675 C 816 675, 816 717, 836 717" fill="none" stroke="#059669" stroke-width="2.2" marker-end="url(#arrowEmerald)"/>
+<path d="M 796 827 C 816 827, 816 717, 836 717" fill="none" stroke="#059669" stroke-width="2.2" marker-end="url(#arrowEmerald)"/>
+<line x1="1018" y1="502" x2="1018" y2="538" stroke="#059669" stroke-width="2.8" marker-end="url(#arrowEmerald)"/>
+<line x1="1198" y1="327" x2="1236" y2="327" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#arrowIndigo)"/>
+<line x1="1198" y1="717" x2="1236" y2="717" stroke="#4f46e5" stroke-width="2.5" marker-end="url(#arrowIndigo)"/>
+<line x1="1408" y1="502" x2="1408" y2="538" stroke="#4f46e5" stroke-width="2.8" marker-end="url(#arrowIndigo)"/>
+</svg>

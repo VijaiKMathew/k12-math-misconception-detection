@@ -1,0 +1,72 @@
+{
+  "architecture": "S6E10_MultiFamily_Orthogonal_Logit_Stacking + QuantumCircuit_Unitary_Horizon_Verifier",
+  "version": "3.3.0",
+  "updated": "2026-11-07",
+  "active_champion": {
+    "label": "s6e10-qaggle-unitary-5paradigm-global-optima-stacker-v3.3",
+    "cv_score": 0.69811,
+    "verified_public_lb": 0.62383,
+    "lb_ref": 57973475
+  },
+  "stagnation_circuit_breaker": {
+    "min_single_paradigm_delta": 0.005,
+    "max_consecutive_micro_tweaks": 2,
+    "min_unclean_horizon_recall": 0.90,
+    "min_paradigm_top1_disagreement": 0.08
+  },
+  "paradigms": {
+    "P1_Multimodal_VLM": {
+      "family": "Vision-Language Generative / Discriminative + CoT Step-Supervision",
+      "models": [
+        "Qwen3.5-9B-ZeroShot-75Class",
+        "Qwen2.5-VL-7B-5Field-CoT-Step-QLoRA",
+        "Qwen2.5-Math-7B-Listwise-Top10-Reranker"
+      ],
+      "role": "Line-indexed handwriting OCR, Top-8 candidate generation, full 75-class visual log-probabilities, and 5-field CoT step-localization SFT (Wave 3 target: 0.795-0.815 CV, breaks Top 20 0.79983)",
+      "status": "Zero-Shot 75-Class Active in v3.3; Wave 3 5-Field CoT SFT + Listwise Reranker Staged"
+    },
+    "P2_Unitary_Horizon_And_Consensus_Diff": {
+      "family": "Quantum-Circuit Subspace Expansion, 55k Classmate Consensus & Contrastive Bi-Encoder",
+      "models": [
+        "Unitary-Top24-Horizon-Expander",
+        "Classmate-55k-Consensus-DirtyLine-Retriever",
+        "BAAI-bge-m3-OCR-Parity-MNRL-BiEncoder"
+      ],
+      "role": "Expands candidate recall from 79.16% (Top-8) to 92.29% unclean / 94.60% overall (H24) and 97.0%+ with 7-hard-negative MNRL; isolates first divergent step L_k against 55,000-trace classmate consensus bank",
+      "status": "Active in Production (v3.3 Recall@24: 92.29% unclean; P2 MNRL 112.5k OOF & 262.35k test logits generated)"
+    },
+    "P3_Process_Supervised_Step_CrossScorer": {
+      "family": "Trace-Grouped ListNet Step Cross-Encoder & Root-vs-Secondary Contrastive Memory",
+      "models": [
+        "OOF-Verbatim-Span-FinalLine-Scorer",
+        "Question-Conditioned-NonRoot-Trap-Suppressor",
+        "DeBERTa-v3-Large-TraceGrouped-ListNet-CrossEncoder"
+      ],
+      "role": "Scores isolated step-diff pairs over Unitary Horizon using trace-local ListNet softmax + intra-trace root-vs-secondary margin ranking loss (Wave 2 target: 0.720-0.745 CV, breaks Top 50 0.71433)",
+      "status": "OOF Span/Trap Memory + Unitary H24 OOF/Test Parquets Active; Wave 2 3-Seed ListNet Ready"
+    },
+    "P4_Quantum_Symbolic_State_Verifier": {
+      "family": "Deterministic Algebraic & Operator State-Transition Verifier",
+      "models": [
+        "SymPy-Algebraic-LineTransition-Verifier",
+        "KPF-LCM-GCD-Invariant-Checker",
+        "ANS01-IntermediateStop-Detector",
+        "HighPrecision-FalseClean-Demoter",
+        "Classmate-38PureSibling-Disambiguation-Grounder"
+      ],
+      "role": "Pinpoints exact mathematical rule violations across L_1 -> L_m transitions, demotes false-clean traces on deterministic symbolic triggers, and grounds pure-error sibling questions",
+      "status": "Active in Production (v3.3 Champion, src/qaggle/verifier.py)"
+    },
+    "P5_Multi_GBDT_Orthogonal_Stacker": {
+      "family": "3-Seed Listwise Gradient Boosted Rankers & Max-Preserving Subspace Projection",
+      "models": [
+        "LightGBM-LambdaRank-3Seed",
+        "CatBoost-QuerySoftMax-3Seed",
+        "IntraTrace-Percentile-Temperature-Calibrator",
+        "MaxPreserving-Orthogonal-Projector"
+      ],
+      "role": "Combines orthogonal paradigm logits via nested question-grouped coordinate ascent while mathematically decoupling the Clean-Gate (NONE, 0.93764) boundary from intra-error ranking",
+      "status": "Active Champion Stacker (v3.3 CV 0.69811 / Verified LB 0.62383, src/qaggle/stacking.py)"
+    }
+  }
+}

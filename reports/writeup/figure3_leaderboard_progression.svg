@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="680" viewBox="0 0 1500 680">
+
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Helvetica Neue', Arial, sans-serif; }
+      .mono { font-family: 'SF Mono', 'JetBrains Mono', 'Menlo', 'Consolas', monospace; }
+    </style>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <filter id="shadow-sm" x="-3%" y="-3%" width="106%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#be123c"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+    <marker id="arrowSlate" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748b"/>
+    </marker>
+    <marker id="arrowEmerald" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#059669"/>
+    </marker>
+    <marker id="arrowIndigo" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#4f46e5"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0284c7"/>
+    </marker>
+  </defs>
+
+<rect width="1500" height="680" fill="#f8fafc"/>
+<g filter="url(#shadow)">
+  <rect x="24" y="18" width="1452" height="62" rx="12" fill="url(#headerGrad)"/>
+  <text x="46" y="47" fill="#ffffff" font-size="19" font-weight="800">SCORE PROGRESSION TIMELINE: HONEST 5-FOLD OOF CV VS. VERIFIED PUBLIC LB</text>
+  <text x="46" y="67" fill="#94a3b8" font-size="12.5" font-weight="500">Monotonic generalization across 6 architectural epochs (+0.2529 CV lift / +0.2298 Verified Public LB lift)</text>
+</g>
+<g filter="url(#shadow-sm)">
+  <rect x="24" y="96" width="1452" height="560" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+</g>
+<line x1="110" y1="535.0" x2="1430" y2="535.0" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="98" y="539.0" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="end" class="mono">0.30</text>
+<line x1="110" y1="492.77777777777777" x2="1430" y2="492.77777777777777" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="98" y="496.77777777777777" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="end" class="mono">0.35</text>
+<line x1="110" y1="450.55555555555554" x2="1430" y2="450.55555555555554" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="98" y="454.55555555555554" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="end" class="mono">0.40</text>
+<line x1="110" y1="408.3333333333333" x2="1430" y2="408.3333333333333" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="98" y="412.3333333333333" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="end" class="mono">0.45</text>
+<line x1="110" y1="366.1111111111111" x2="1430" y2="366.1111111111111" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="98" y="370.1111111111111" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="end" class="mono">0.50</text>
+<line x1="110" y1="323.8888888888888" x2="1430" y2="323.8888888888888" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="98" y="327.8888888888888" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="end" class="mono">0.55</text>
+<line x1="110" y1="281.6666666666667" x2="1430" y2="281.6666666666667" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="98" y="285.6666666666667" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="end" class="mono">0.60</text>
+<line x1="110" y1="239.44444444444446" x2="1430" y2="239.44444444444446" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="98" y="243.44444444444446" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="end" class="mono">0.65</text>
+<line x1="110" y1="197.22222222222223" x2="1430" y2="197.22222222222223" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="98" y="201.22222222222223" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="end" class="mono">0.70</text>
+<line x1="110" y1="155.0" x2="1430" y2="155.0" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="4,4"/>
+<text x="98" y="159.0" fill="#64748b" font-size="11.5" font-weight="600" text-anchor="end" class="mono">0.75</text>
+<text x="48" y="345.0" fill="#0f172a" font-size="13" font-weight="700" text-anchor="middle" transform="rotate(-90 48 345.0)">MAP@3 Evaluation Metric</text>
+<rect x="160.0" y="426.9111111111111" width="56" height="108.0888888888889" rx="6" fill="url(#blueGrad)" stroke="#1e3a8a" stroke-width="1.4"/>
+<rect x="224.0" y="454.77777777777777" width="56" height="80.22222222222223" rx="6" fill="url(#emeraldGrad)" stroke="#065f46" stroke-width="1.4"/>
+<text x="188.0" y="416.9111111111111" fill="#1e3a8a" font-size="11.5" font-weight="800" text-anchor="middle" class="mono">0.42800</text>
+<text x="252.0" y="444.77777777777777" fill="#065f46" font-size="11.5" font-weight="800" text-anchor="middle" class="mono">0.39500</text>
+<text x="220.0" y="559" fill="#0f172a" font-size="12.5" font-weight="800" text-anchor="middle">Epoch 0: Baseline</text>
+<text x="220.0" y="577" fill="#64748b" font-size="11" font-weight="500" text-anchor="middle">Empirical Topic Prior</text>
+<rect x="380.0" y="339.9333333333333" width="56" height="195.06666666666672" rx="6" fill="url(#blueGrad)" stroke="#1e3a8a" stroke-width="1.4"/>
+<rect x="444.0" y="381.31111111111113" width="56" height="153.68888888888887" rx="6" fill="url(#emeraldGrad)" stroke="#065f46" stroke-width="1.4"/>
+<text x="408.0" y="329.9333333333333" fill="#1e3a8a" font-size="11.5" font-weight="800" text-anchor="middle" class="mono">0.53100</text>
+<text x="472.0" y="371.31111111111113" fill="#065f46" font-size="11.5" font-weight="800" text-anchor="middle" class="mono">0.48200</text>
+<text x="440.0" y="559" fill="#0f172a" font-size="12.5" font-weight="800" text-anchor="middle">Epoch 1: v1.0 GBDT</text>
+<text x="440.0" y="577" fill="#64748b" font-size="11" font-weight="500" text-anchor="middle">Single LightGBM Ranker</text>
+<rect x="600.0" y="273.8808888888889" width="56" height="261.1191111111111" rx="6" fill="url(#blueGrad)" stroke="#1e3a8a" stroke-width="1.4"/>
+<rect x="664.0" y="323.04444444444437" width="56" height="211.95555555555563" rx="6" fill="url(#emeraldGrad)" stroke="#065f46" stroke-width="1.4"/>
+<text x="628.0" y="263.8808888888889" fill="#1e3a8a" font-size="11.5" font-weight="800" text-anchor="middle" class="mono">0.60922</text>
+<text x="692.0" y="313.04444444444437" fill="#065f46" font-size="11.5" font-weight="800" text-anchor="middle" class="mono">0.55100</text>
+<text x="660.0" y="559" fill="#0f172a" font-size="12.5" font-weight="800" text-anchor="middle">Epoch 2: v2.0 Horizon</text>
+<text x="660.0" y="577" fill="#64748b" font-size="11" font-weight="500" text-anchor="middle">Unitary H24 Expansion</text>
+<rect x="820.0" y="226.49911111111112" width="56" height="308.5008888888889" rx="6" fill="url(#blueGrad)" stroke="#1e3a8a" stroke-width="1.4"/>
+<rect x="884.0" y="266.46666666666664" width="56" height="268.53333333333336" rx="6" fill="url(#emeraldGrad)" stroke="#065f46" stroke-width="1.4"/>
+<text x="848.0" y="216.49911111111112" fill="#1e3a8a" font-size="11.5" font-weight="800" text-anchor="middle" class="mono">0.66533</text>
+<text x="912.0" y="256.46666666666664" fill="#065f46" font-size="11.5" font-weight="800" text-anchor="middle" class="mono">0.61800</text>
+<text x="880.0" y="559" fill="#0f172a" font-size="12.5" font-weight="800" text-anchor="middle">Epoch 3: v2.9 Symbolic</text>
+<text x="880.0" y="577" fill="#64748b" font-size="11" font-weight="500" text-anchor="middle">38 Sibling Rules + P^perp</text>
+<rect x="1040.0" y="219.0933333333333" width="56" height="315.9066666666667" rx="6" fill="url(#blueGrad)" stroke="#1e3a8a" stroke-width="1.4"/>
+<rect x="1104.0" y="264.49911111111106" width="56" height="270.50088888888894" rx="6" fill="url(#emeraldGrad)" stroke="#065f46" stroke-width="1.4"/>
+<text x="1068.0" y="209.0933333333333" fill="#1e3a8a" font-size="11.5" font-weight="800" text-anchor="middle" class="mono">0.67410</text>
+<text x="1132.0" y="254.49911111111106" fill="#065f46" font-size="11.5" font-weight="800" text-anchor="middle" class="mono">0.62033</text>
+<text x="1100.0" y="559" fill="#0f172a" font-size="12.5" font-weight="800" text-anchor="middle">Epoch 4: v3.3 Consensus</text>
+<text x="1100.0" y="577" fill="#64748b" font-size="11" font-weight="500" text-anchor="middle">55k Classmate Bank</text>
+<rect x="1260.0" y="213.35955555555557" width="56" height="321.6404444444444" rx="6" fill="url(#blueGrad)" stroke="#1e3a8a" stroke-width="1.4"/>
+<rect x="1324.0" y="260.6991111111111" width="56" height="274.3008888888889" rx="6" fill="url(#emeraldGrad)" stroke="#065f46" stroke-width="1.4"/>
+<text x="1288.0" y="203.35955555555557" fill="#1e3a8a" font-size="11.5" font-weight="800" text-anchor="middle" class="mono">0.68089</text>
+<text x="1352.0" y="250.6991111111111" fill="#065f46" font-size="11.5" font-weight="800" text-anchor="middle" class="mono">0.62483</text>
+<text x="1320.0" y="559" fill="#0f172a" font-size="12.5" font-weight="800" text-anchor="middle">Epoch 5: Champion v4.2</text>
+<text x="1320.0" y="577" fill="#64748b" font-size="11" font-weight="500" text-anchor="middle">5-Paradigm Audited Stack</text>
+<polyline points="188.0,426.9 408.0,339.9 628.0,273.9 848.0,226.5 1068.0,219.1 1288.0,213.4" fill="none" stroke="#1d4ed8" stroke-width="2.5" stroke-dasharray="6,4"/>
+<polyline points="252.0,454.8 472.0,381.3 692.0,323.0 912.0,266.5 1132.0,264.5 1352.0,260.7" fill="none" stroke="#047857" stroke-width="2.5"/>
+<circle cx="188.0" cy="426.9" r="5" fill="#ffffff" stroke="#1d4ed8" stroke-width="2.5"/>
+<circle cx="408.0" cy="339.9" r="5" fill="#ffffff" stroke="#1d4ed8" stroke-width="2.5"/>
+<circle cx="628.0" cy="273.9" r="5" fill="#ffffff" stroke="#1d4ed8" stroke-width="2.5"/>
+<circle cx="848.0" cy="226.5" r="5" fill="#ffffff" stroke="#1d4ed8" stroke-width="2.5"/>
+<circle cx="1068.0" cy="219.1" r="5" fill="#ffffff" stroke="#1d4ed8" stroke-width="2.5"/>
+<circle cx="1288.0" cy="213.4" r="5" fill="#ffffff" stroke="#1d4ed8" stroke-width="2.5"/>
+<circle cx="252.0" cy="454.8" r="5" fill="#ffffff" stroke="#047857" stroke-width="2.5"/>
+<circle cx="472.0" cy="381.3" r="5" fill="#ffffff" stroke="#047857" stroke-width="2.5"/>
+<circle cx="692.0" cy="323.0" r="5" fill="#ffffff" stroke="#047857" stroke-width="2.5"/>
+<circle cx="912.0" cy="266.5" r="5" fill="#ffffff" stroke="#047857" stroke-width="2.5"/>
+<circle cx="1132.0" cy="264.5" r="5" fill="#ffffff" stroke="#047857" stroke-width="2.5"/>
+<circle cx="1352.0" cy="260.7" r="5" fill="#ffffff" stroke="#047857" stroke-width="2.5"/>
+<rect x="135" y="114" width="470" height="36" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2"/>
+<rect x="152" y="124" width="18" height="16" rx="3" fill="url(#blueGrad)"/>
+<text x="178" y="137" fill="#0f172a" font-size="12" font-weight="700">Honest 5-Fold OOF CV (MAP@3)</text>
+<rect x="382" y="124" width="18" height="16" rx="3" fill="url(#emeraldGrad)"/>
+<text x="408" y="137" fill="#0f172a" font-size="12" font-weight="700">Verified Public LB (MAP@3)</text>
+<rect x="110" y="596" width="1320" height="42" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="770" y="622" fill="#0f172a" font-size="12" font-weight="700" text-anchor="middle" class="mono">Champion v4.2 Cohort Breakdown:  Clean (NONE): 0.94246  |  Unclean Errors: 0.56914  |  High School: 0.62954  |  Bottleneck-5: 0.56190  |  Ref: #58314170</text>
+</svg>
