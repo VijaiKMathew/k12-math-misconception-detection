@@ -1,11 +1,5 @@
-*.html linguist-vendored=true
-*.html linguist-generated=true
-*.html -linguist-detectable
-**/*.html linguist-vendored=true
-**/*.html linguist-generated=true
-**/*.html -linguist-detectable
-reports/** linguist-vendored=true
-reports/** linguist-generated=true
-reports/** -linguist-detectable
-docs/** linguist-documentation=true
-configs/** linguist-vendored=true
+*.html -linguist-detectable linguist-documentation linguist-vendored linguist-generated
+**/*.html -linguist-detectable linguist-documentation linguist-vendored linguist-generated
+reports/** -linguist-detectable linguist-documentation linguist-vendored linguist-generated
+docs/** linguist-documentation
+configs/** linguist-vendored
