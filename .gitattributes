@@ -1,0 +1,13 @@
+*.html -linguist-detectable
+*.html linguist-vendored
+*.html linguist-documentation
+**/*.html -linguist-detectable
+**/*.html linguist-vendored
+**/*.html linguist-documentation
+reports/** -linguist-detectable
+reports/** linguist-vendored
+reports/** linguist-documentation
+docs/** -linguist-detectable
+docs/** linguist-documentation
+configs/** -linguist-detectable
+configs/** linguist-vendored
