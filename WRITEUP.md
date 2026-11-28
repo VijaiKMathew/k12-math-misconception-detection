@@ -3,7 +3,7 @@
 **Competition:** [Misconception Detection in K-12 Student Math Workings](https://www.kaggle.com/competitions/misconception-detection-in-k-12-student-math-workings)  
 **Metric:** `MAP@3` (Mean Average Precision @ 3 — Evaluating top-3 diagnostic root code predictions)  
 **Target:** `root_code` (Space-delimited top-3 ranking across 75 fine-grained pedagogical misconception codes or `NONE`)  
-**Current Champion:** `s6e10-qaggle-unitary-5paradigm-global-optima-stacker-v4.2` (Verified Public LB: **`0.62483`**, ref `#58314170`, Live Rank **192 / 423**)  
+**Current Champion:** `s6e10-qaggle-unitary-5paradigm-global-optima-stacker-v4.2` (Verified Public LB: **`0.62483`**, Private LB: **`0.62496`** [`v2.9` peak: `0.62603`], ref `#58394418` / `#58314170`, Final Rank **226 / 484**)  
 **Honest 5-Fold CV:** **`0.68089`** (Strictly leak-free, zero train-literal memorization, audited against in-sample leakage)  
 **Cohort Breakdown:** `Unclean Workings: 0.56914` | `Clean Workings: 0.94246` | `High School: 0.62954` | `Bottleneck-5: 0.56190` | `Top-1 Accuracy: 62.13%` | `Top-3 Recall: 75.73%`  
 **Tech Stack:** Python, Polars, PyTorch, Transformers, LightGBM, CatBoost, Scikit-Learn, `uv`  
@@ -240,3 +240,101 @@ uv run python tools/eval/produce_global_optima_s6e10_qaggle.py --export-aux
 Special thanks to **CoLearn Lab** and **Kaggle** for hosting this impactful competition at the intersection of multimodal AI, symbolic reasoning, and K-12 mathematics education.
 
 ⭐ **If you found our architecture, diagrams, interactive HTML dashboard, or masterclass notebook helpful, please consider leaving an Upvote on Kaggle and starring our [GitHub Repository](https://github.com/VijaiKMathew/k12-math-misconception-detection)!**
+
+---
+
+## 🏁 Private Leaderboard Post-Mortem & Forensic Gap Analysis
+
+**Final Competition Standing (Released November 2026):**
+- **Team:** `zoro-in-action` (`vijaikm`)
+- **Selected Champion (`v4.2`, ref `#58394418` / `#58314170`):** Public LB **`0.62483`** | Private LB **`0.62496`** (**`+0.00013` Zero-Shakeup Generalization**)
+- **Peak Private LB (Unselected `v2.9`, ref `#57973475`):** Public LB `0.62383` | Private LB **`0.62603`**
+- **Final Leaderboard Rank:** **`226 / 484`** teams
+- **Top-10 Private LB Benchmark:** **`0.84414`** (`Komil Parmar`, `Wassim Dobbi`) — Gap: **`+0.21918` MAP@3**
+
+### 1. Private Leaderboard Top-10 vs. Our Pipeline
+
+| Rank | Team | Public LB | Private LB | Gap to Our `v4.2` |
+| :---: | :--- | :---: | :---: | :---: |
+| **1** | **Komil Parmar** | `0.84366` | **`0.84414`** | `+0.21918` |
+| **2** | **Wassim Dobbi** | `0.84766` | **`0.84414`** | `+0.21918` |
+| **3** | **Cloudyy** | `0.83083` | **`0.83740`** | `+0.21244` |
+| **4** | **Crown** | `0.82600` | **`0.83620`** | `+0.21124` |
+| **5** | **Massimiliano Pianges** | `0.83583` | **`0.83466`** | `+0.20970` |
+| **6** | **cuda graph compile error** | `0.84766` | **`0.83453`** | `+0.20957` |
+| **7** | **Winter Lamb** | `0.83083` | **`0.83393`** | `+0.20897` |
+| **8** | **monnu** | `0.84183` | **`0.83259`** | `+0.20763` |
+| **9** | **Amin** | `0.83366` | **`0.83133`** | `+0.20637` |
+| **10** | **Zedan Soorya** | — | **`0.82906`** | `+0.20410` |
+| **226** | **zoro-in-action (`v4.2`)** | **`0.62483`** | **`0.62496`** | *Baseline* |
+
+---
+
+### 2. Pros: What Worked & Why We Had Zero Shakeup
+
+1. **Zero-Shakeup Generalization (`0.62483` Public $\to$ `0.62496` Private):**  
+   While overfitted submissions collapsed on the 71% Private split (including our own `v4.3` at `0.69256` CV $\to$ `0.60735` Private), `v4.2` improved by `+0.00013` on Private LB. Our adversarial anti-memorization audit and leak-free 5-fold CV (`0.68089`) prevented a catastrophic shakeup.
+2. **Clean Gate Protection ($\mathcal{P}^{\perp}$):**  
+   Locking the `NONE` decision boundary at **`0.94246` MAP@3** prevented false-positive misconception flips on correct student workings.
+3. **Unitary Horizon Expansion ($\mathcal{H}_{24}$):**  
+   Breaking the frozen Top-8 candidate ceiling (`79.16%` $\to$ `94.60%` overall / `92.29%` unclean recall) proved that candidate generation was not the final bottleneck.
+4. **38 Deterministic Symbolic Sibling Rules:**  
+   Added `+0.0485` MAP@3 on unclean workings with zero degradation on clean workings.
+
+---
+
+### 3. Cons & What Failed Miserably
+
+1. **Train-Literal Regex Memorization (`v4.0` / `v4.1`):**  
+   Created a deceptive **`0.90044` CV** illusion that collapsed to **`0.62333` Public / `0.62369` Private**.
+2. **Over-Parameterized Listwise Calibration (`v4.3`):**  
+   Pushed CV to `0.69256` but overfit to OOF logit noise, dropping to **`0.61283` Public / `0.60735` Private** (`-0.01761` vs `v4.2`).
+3. **Text-Only LLMs & Monolithic Prompting (`-0.0520` MAP@3):**  
+   Because `test.csv` contains **zero** human `transcription_steps`, any pipeline relying on text-only causal LMs or monolithic prompting suffered immediate modality-shift collapse.
+4. **Frozen Top-8 Candidate Pool (`-0.0710` MAP@3):**  
+   Capped recall at `79.16%`, starving downstream rerankers of ground-truth candidates.
+
+---
+
+### 4. What We Missed (GPU/Time Constraints) vs. Top-10 Winners (`0.844+`)
+
+The **`+0.219` MAP@3 gap** between `0.62496` and `0.84414` was not caused by ensemble weighting—it was a **representation and compute-scale gap**:
+
+1. **Two-Stage VLM-to-LaTeX Transcription Before Reranking:**  
+   Top teams (`0.83–0.844`) used fine-tuned **Qwen2.5-VL-7B / 14B / 32B** (and dual-VLM ensembles) to **transcribe handwritten test images line-by-line into structured LaTeX** *first*, bridging the 100% missing `transcription_steps` gap in `test.csv`. On a single **Colab Tesla T4 (16GB VRAM)**, we were restricted to 4-bit QLoRA on `Qwen2.5-VL-7B` with small batch sizes and truncated context.
+2. **Large Cross-Encoder Rerankers with Mined Hard Negatives:**  
+   Winners trained **Qwen2.5-7B/14B LoRA rerankers** + **DeBERTa-v3-Large** cross-encoders using **mined hard negatives** (top-K false positives from bi-encoder retrieval) and **synthetic distractor-explanation augmentation**, then distilled/quantized them to fit Kaggle's 9-hour offline GPU limit.
+3. **Multi-GPU / A100 Compute Budget:**  
+   Full 5-fold VLM fine-tuning + 14B cross-encoder ensembling requires A100/H100 compute. Our single-T4 Tailscale WireGuard mesh kept us competitive in engineering rigor and zero-shakeup stability, but could not match 14B/32B VLM transcription fidelity.
+
+### 5. Actionable Playbook for Next Competition
+
+1. **Prioritize Modality Bridging First:** When `test.csv` drops a critical modality (like `transcription_steps`), dedicate 60%+ of GPU budget to training a high-capacity VLM transcriber before building downstream stackers.
+2. **Mine Hard Negatives Early:** Replace random in-batch negatives with top-K bi-encoder false positives for cross-encoder reranking.
+3. **Keep Simple, Audited Baselines:** Our `v2.9` (`0.62603` Private) and `v4.2` (`0.62496` Private) beat over-tuned `v4.3` (`0.60735` Private). Simplicity + strict OOF hygiene wins shakeups.
+
+---
+
+## 🎓 Plain-English Intuition & Career Takeaways (For Junior Data Scientists)
+
+If you are early in your machine learning or Kaggle journey, here is the simple intuition behind what happened in this competition—and the career lessons you can apply to your next project.
+
+### 1. The Simple Intuition: Why Was This Problem Hard?
+Imagine grading 1,000 handwritten math homework sheets:
+- **In training**, you are given both the **photo** of the student's handwriting *and* a **clean typed transcript** of every step they wrote.
+- **In the final test**, you are **only given the photo**—no typed transcript!
+- If your model only learned to read the typed transcript, it fails completely on the test set.
+- Furthermore, **45% of students got the answer right (`NONE`)**. If your model guesses a misconception when the student was actually right, your score drops sharply.
+
+### 2. How Our Solution Worked (In 4 Simple Steps)
+1. **Don't Rely on One Model (5-Paradigm Diversity):** Instead of tuning one model 50 times, we combined 5 completely different approaches: a Vision-Language Model (`Qwen2.5-VL`), a similarity search over 55,000 past examples (`BGE-M3`), a text-pair scorer (`DeBERTa-v3`), 38 deterministic math rules, and gradient-boosted trees (`LightGBM` + `CatBoost`).
+2. **Cast a Wide Net First ($\mathcal{H}_{24}$):** If you only look at your top 8 guesses, you miss the right answer 20% of the time. Expanding the candidate pool to 24 guesses lifted our recall to **94.6%**.
+3. **Protect the "No Error" Class ($\mathcal{P}^{\perp}$):** We locked the threshold for predicting `NONE` so that combining multiple models wouldn't accidentally flip a correct student's work into a false error.
+4. **Trust Honest Validation Over Inflated Scores:** Our `v4.0` model scored `0.90044` locally because it memorized exact training phrases, but it crashed to `0.62369` on the real test. Stripping out those shortcuts dropped local CV to `0.68089`—and gave us **zero shakeup** (`0.62483` Public $\to$ `0.62496` Private).
+
+### 3. Five Career Lessons from This Competition
+1. **Solve the Missing-Modality Gap First:** Always inspect what is in `train.csv` vs. `test.csv` on Day 1. When `test.csv` drops a key feature (like `transcription_steps`), your #1 priority is building a model to reconstruct it (e.g., VLM OCR), not tuning downstream ensembles.
+2. **A High Local Score Can Be a Trap:** If your local CV jumps from `0.68` to `0.90` overnight, be suspicious—check for data leakage or memorization immediately.
+3. **Hard Negatives Beat Random Negatives:** Teaching a model to distinguish between two *nearly identical* math errors (e.g., sign error vs. order-of-operations error) is far more valuable than comparing against random errors.
+4. **Compute Constraints Force Engineering Discipline:** Even with a single T4 GPU, strict out-of-fold validation, clean modular code, and reproducible pipelines prevent overfitting and build production-ready habits.
+5. **Document Your Failures:** Recording what *didn't* work (`v4.0` memorization, `v4.3` over-calibration) is just as valuable as recording what worked—it saves you and your team weeks on future projects.

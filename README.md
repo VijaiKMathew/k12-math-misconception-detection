@@ -5,7 +5,7 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Package Manager: uv](https://img.shields.io/badge/managed%20by-uv-261230.svg?style=flat&logo=python)](https://github.com/astral-sh/uv)
-[![Evaluation Metric](https://img.shields.io/badge/MAP%403-0.62483%20LB-success.svg)](#)
+[![Evaluation Metric](https://img.shields.io/badge/MAP%403-0.62496%20Private%20LB-success.svg)](#)
 
 > Complete, leak-free, reproducible machine learning pipeline for the Kaggle **Misconception Detection in K-12 Student Math Workings** competition.
 >
